@@ -1,0 +1,36 @@
+.header{
+    text-align: center;
+}
+.logo-img{
+    width: 400px;
+}
+nav{
+    background-color: black;
+}
+.navigation-bar{
+    text-align: left;
+    margin-left: 50px;
+    padding: 17px;
+}
+.navigation-bar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(224, 216, 216);
+    transition: 0.4s;
+    padding: 17px;
+}
+.navigation-bar a:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+/* search option */
+.search-option{
+    background-color: #222;
+    padding: 20px 0;
+}
+.search-input{
+    width: 70%;
+    padding: 6px;
+    font-size: 19px;
+}
