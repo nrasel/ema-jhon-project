@@ -12,8 +12,8 @@ const Cart = (props) => {
     const OrderTotal = items + shipping + tax
     return (
         <div>
-            <h3>Order Summary</h3>
-            <p>Items Ordered: {props.cart.length}</p>
+            <h3 style={{ textAlign: 'center' }}>Order Summary</h3>
+            <p style={{ textAlign: 'center' }}>Items Ordered: {props.cart.length}</p>
             <p><strong>items:</strong> ${items.toFixed(2)}</p>
             <p><strong>Shipping & Handling:</strong> ${shipping.toFixed(2)}</p>
             <p><strong>Total before tax:</strong> ${totalBeforeTax.toFixed(2)}</p>
