@@ -3,17 +3,24 @@ import React from 'react';
 const Cart = (props) => {
     let items = 0;
     let shipping = 0;
-    for (let product of props.cart) {
-        items = items + product.price;
+    let totalQuantity = 0;
+    for (const product of props.cart) {
+        if (!product.quantity) {
+            product.quantity = 1
+        }
+        else {
+            totalQuantity = totalQuantity + product.quantity;
+        }
+        items = items + product.price * product.quantity;
         shipping = shipping + product.shipping;
     }
     let totalBeforeTax = items + shipping;
     let tax = totalBeforeTax * 0.05;
-    const OrderTotal = items + shipping + tax
+    const OrderTotal = totalBeforeTax + tax
     return (
         <div>
             <h3 style={{ textAlign: 'center' }}>Order Summary</h3>
-            <p style={{ textAlign: 'center' }}>Items Ordered: {props.cart.length}</p>
+            <p style={{ textAlign: 'center' }}>Items Ordered: {totalQuantity}</p>
             <p><strong>items:</strong> ${items.toFixed(2)}</p>
             <p><strong>Shipping & Handling:</strong> ${shipping.toFixed(2)}</p>
             <p><strong>Total before tax:</strong> ${totalBeforeTax.toFixed(2)}</p>

@@ -24,21 +24,3 @@ nav{
     color: black;
 }
 
-/* search option */
-.search-option{
-    background-color: #222;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-}
-.search-input{
-    width: 70%;
-    padding: 6px;
-    font-size: 19px;
-    margin-left: 100px;
-}
-.cart-icon{
-    font-size: 30px;
-    color: white;
-    margin-left: 12px;
-}
